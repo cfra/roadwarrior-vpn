@@ -6,6 +6,7 @@ dev tun
 dev-type tun
 comp-lzo no
 compress
+topology subnet
 EOF
 
 echo "<ca>" >&3
