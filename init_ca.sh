@@ -36,7 +36,7 @@ openssl genrsa \
 	-aes256 \
 	-out private/cakey.pem 4096
 openssl req \
-	-days 3650 \
+	-days 7300 \
 	-sha256 \
 	-new \
 	-x509 \
