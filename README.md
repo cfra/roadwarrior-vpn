@@ -11,7 +11,7 @@ On some machine which you trust with the PKI:
 
 1.  Clone this git:
     ```console
-    git clone https://github.com/cfra/roadwarrior-vpn.git /etc/roadwarrior-vpn
+    git clone https://github.com/cfra/roadwarrior-vpn.git
     ```
 1.  Create a `SETTINGS` file from `SETTINGS.example`.
 1.  Initialize the CA:
