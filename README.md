@@ -29,6 +29,10 @@ On some machine which you trust with the PKI:
 
 ## Server
 
+1.  Install OpenVPN on the server:
+    ```console
+    apt install openvpn
+    ```
 1.  Edit the VPN config
 1.  Put the generated config from the PKI system to the machine which should be
     the VPN server:
