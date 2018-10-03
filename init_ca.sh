@@ -42,7 +42,7 @@ openssl req \
 	-x509 \
 	-key private/cakey.pem \
 	-out cacert.pem \
-	-config ../openssl-client.cnf \
+	-config ../openssl.cnf \
 	-subj "/CN=CA for $HOSTNAME"
 
 echo "Created CA Certificate:"
