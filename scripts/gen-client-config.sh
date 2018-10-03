@@ -1,8 +1,11 @@
 cat >&3 << EOF
 client
 remote $HOSTNAME 1195
-remote-crt-tls server
+remote-cert-tls server
+dev tun
 dev-type tun
+comp-lzo no
+compress
 EOF
 
 echo "<ca>" >&3
