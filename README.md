@@ -1,5 +1,6 @@
-Setting up a Roadwarrior VPN
-============================
+#Setting up a Roadwarrior VPN
+
+## PKI
 
 On some machine which you trust with the PKI:
 
@@ -12,7 +13,33 @@ On some machine which you trust with the PKI:
     ```console
     ./init_ca.sh
     ```
-1.  Add a client:
+1.  Create Server Config:
     ```console
-    ./new client client-common-name
+    ./new_endpoint server <server-common-name>
     ```
+1.  Create Client Config:
+    ```console
+    ./new_endpoint client <client-common-name>
+    ```
+
+## Server
+
+1.  Edit the VPN config
+1.  Put the generated config from the PKI system to the machine which should be
+    the VPN server:
+    ```console
+    scp servers/vpn.example.com.ovpn vpn.example.com:/etc/openvpn/roadwarrior.conf
+    ```
+1.  On the server, enable and start the VPN service:
+    ```console
+    systemctl enable openvpn@roadwarrior.service
+    systemctl start openvpn@roadwarrior.service
+    ```
+1.  Verify its status:
+    ```console
+    systemctl status openvpn@roadwarrior.service 
+    ```
+
+## Client
+
+1. The generated config should just be usable as is
