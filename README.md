@@ -1,4 +1,4 @@
-#Setting up a Roadwarrior OpenVPN
+# Setting up a Roadwarrior OpenVPN
 
 Setting up a roadwarrior VPN with OpenVPN was a bit tricky for me. Therefore,
 I have put together some scripts which should make a sensible setup easier.
