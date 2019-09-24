@@ -22,11 +22,11 @@ On some machine which you trust with the PKI:
     ```
 1.  Create Server Config:
     ```console
-    ./new_endpoint server <server-common-name>
+    ./new_endpoint.sh server <server-common-name>
     ```
 1.  Create Client Config:
     ```console
-    ./new_endpoint client <client-common-name>
+    ./new_endpoint.sh client <client-common-name>
     ```
 
 ## Server
@@ -53,4 +53,16 @@ On some machine which you trust with the PKI:
 
 ## Client
 
-1. The generated config should just be usable as is
+1.  The generated config should just be usable as is
+
+## Revocation
+
+1.  Call the revocation script:
+    ```console
+    ./revoke_endpoint.sh client <client-common-name>
+    ```
+2.  Copy the generated CRL from `pki/ca/crl/current.pem` to a place where OpenVPN
+    can read it and reference it like this, updating the path accordingly:
+    ```text
+    crl-verify crl/current.pem
+    ```
